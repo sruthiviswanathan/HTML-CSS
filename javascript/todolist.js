@@ -4,7 +4,7 @@ var items=[];
 var data=document.getElementById("data");
 var submitButton=document.getElementById("submit");
 var list=document.getElementById("mylist");
-text.innerHTML="You have an empty list";
+//text.innerHTML="You have an empty list";
 
 if(localStorage.getItem("isSet")=="yes"){
     var result = localStorage.getItem("list");
