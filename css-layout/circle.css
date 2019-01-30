@@ -7,31 +7,28 @@
     top:100px;
 
 }
-.circle1{
+.circle{
     height:200px;
     width:200px;
     border-radius:100px;
     display:inline-block;
-    background-color:greenyellow;
     position:absolute;
+}
+.circle1{
+   
+    background-color:greenyellow;  
     left:140px;
+    z-index: 2;
 }
 .circle2{
-    display:inline-block;
-    height:200px;
-    width:200px;
-    border-radius:100px;
+   
     background-color:orange;
-    position:absolute;
     left:300px;
+    z-index: 1;
 }
 .circle3{
-    display:inline-block;
-    height:200px;
-    width:200px;
-    border-radius:100px;
     background-color: pink;
-    position:absolute;
     left:220px;
     top:130px;
+    z-index: 3;
 }
