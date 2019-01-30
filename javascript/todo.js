@@ -64,6 +64,10 @@ function add (a,b) {
         localStorage.setItem("on_load_counter", n);
   }
 
+  ul.addEventListener('click',function(event){
+
+    
+  });
   
 
 

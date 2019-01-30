@@ -1,26 +1,20 @@
 
-var n = localStorage.getItem('on_load_counter');
-if (n === null) {
-    n = 0;
-} 
 
 var listArray = localStorage.getItem('lists')? JSON.parse(localStorage.getItem('lists')) : [];
 var contentArray = localStorage.getItem('contents')? JSON.parse(localStorage.getItem('contents')) : [];
-var htmlList = document.getElementById("menu");
+var mydiv = document.getElementById("menu");
+var displaydiv = document.getElementById("display");
 
 listArray.forEach(function(value){
     constructList(value);
   } );
 
-  function constructList(text)
+function constructList(text)
 {
-        var mydiv = document.getElementById("menu");
-        var aTag = document.createElement('a');
-        aTag.setAttribute('href',"#");
-        aTag.innerHTML = text;
-        mydiv.appendChild(aTag);
-        var br = document.createElement("BR");
-        mydiv.insertBefore(br,aTag);
+        var li = document.createElement('li');
+        li.setAttribute("type","tit");
+        li.innerHTML = text;
+        mydiv.appendChild(li);
 }
 
 function addNewElement() {
@@ -31,19 +25,15 @@ function addNewElement() {
     if (inputValue === '' || contentValue === '') {
         alert("You must write something!");
       } else {
-      
-        n++;
-        var mydiv = document.getElementById("menu");
-        var aTag = document.createElement('a');
-        aTag.setAttribute('href',contentValue);
-        aTag.innerHTML = inputValue;
-        mydiv.appendChild(aTag);
-        aTag.setAttribute("id","ref"+ n);
-        var br = document.createElement("BR");
-        mydiv.insertBefore(br,aTag);
 
-        // console.log(t);
+        var li = document.createElement('li');
+        li.setAttribute("type","tit");
+
+        li.innerHTML = inputValue;
+        mydiv.appendChild(li);
+
         listArray.push(inputValue);
+       
         contentArray.push(contentValue);
         localStorage.setItem('lists', JSON.stringify(listArray));
         localStorage.setItem('contents', JSON.stringify(contentArray));
@@ -52,4 +42,32 @@ function addNewElement() {
       }
 }
 
+mydiv.addEventListener('click',function(event){
+
+  var elmt =event.target;
+  var a = listArray.indexOf(elmt.innerHTML);
+  console.log(a);
+
+if(displaydiv.innerHTML == " "){
+  
+  //var li = document.createElement('li');
+  //li.setAttribute("type","cont");
+  //li.innerHTML = contentArray[a];
+  //displaydiv.appendChild(li);
+  displaydiv.innerHTML = contentArray[a]; 
+  //displaydiv.value(contentArray[a]);
+
+}
+else{
+  displaydiv.innerHTML = "";
+  // var li = document.createElement('li');
+  // li.setAttribute("type","cont");
+  // li.innerHTML = contentArray[a];
+  // displaydiv.appendChild(li);
+  displaydiv.innerHTML = contentArray[a]; 
+//  displaydiv.value(contentArray[a]);
+
+}
+
+})
 
