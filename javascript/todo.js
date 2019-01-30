@@ -5,7 +5,8 @@ var n = localStorage.getItem('on_load_counter');
 if (n === null) {
     n = 0;
 } 
-
+var ul = document.getElementById("list");
+            var li = document.createElement("li");
 
 console.log(n);
 
@@ -43,20 +44,18 @@ function add (a,b) {
         localStorage.setItem('list', JSON.stringify(items));
         var ul = document.getElementById("list");
         var li = document.createElement("li");
-        
         li.appendChild(document.createTextNode(name.value));
         ul.appendChild(li);
-
         var span = document.createElement("SPAN");
         var strike = document.createElement("BUTTON");
         strike.appendChild(document.createTextNode("Strike"));
         strike.setAttribute("type","strike");
         n++;
-        strike.setAttribute("id","data"+ n);
+        strike.setAttribute("id",n);
         var del = document.createElement("BUTTON");
         del.appendChild(document.createTextNode("cancel"));
         del.setAttribute("type","cancel");
-        del.setAttribute("id","can"+ n);
+        del.setAttribute("id", n);
         del.addEventListener('click',deletefunction);
         ul.appendChild(strike);
         ul.appendChild(del);
@@ -65,11 +64,19 @@ function add (a,b) {
   }
 
   ul.addEventListener('click',function(event){
-
+   
     
   });
   
+  function storeItems(items){
+    localStorage.setItem("isSet","yes");
+    localStorage.setItem("list",JSON.stringify(items));
+}
 
+function deleteList(items,index){
+    items.splice(index,1);
+    storeItems(items);
+}
 
  
 
