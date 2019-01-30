@@ -9,9 +9,10 @@
 </head>
 <body onload="viewlogin()">
         <div class="container">
-       <button type="submit"  onclick="viewlogin()">LOGIN</button>
-        <button type="submit"  onclick="viewsignup()">SIGNUP</button>
-    <form action="" id="login">     
+            <div class="nav">
+        <button type="submit"  onclick="viewlogin()">LOGIN</button><button type="submit"  onclick="viewsignup()">SIGNUP</button>
+            </div>
+        <form action="" id="login">     
         <div class="login">
                 <label for="uname"><b>USERNAME</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
@@ -19,9 +20,10 @@
                 <label for="psw"><b>PASSWORD</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
                 <label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>  
-                <button type="submit" id="login">LOGIN</button>
-                <button type="submit" id="cancel" class="cancelbtn">CANCEL</button>  
-                
+                <div class="nav">
+                    <button type="submit" id="login">LOGIN</button>
+                    <button type="submit" id="cancel" class="cancelbtn">CANCEL</button>  
+                </div>
         </div>
     </form>
     <form action=""id="signup">
@@ -35,10 +37,11 @@
                 <label for="cname"><b>COMPANY NAME</b></label>
                 <input type="text" id="cname" name="cname" placeholder="Company name.."required>
                 <label for="designation"><b>DESIGNATION</b></label>
-                <input type="text" id="designation" name="designation" placeholder="Enter your designation.."required><br>
-                <button type="submit" id="register">REGISTER</button>
-                <button type="submit" id="cancel" class="cancelbtn">CANCEL</button>
-
+                <input type="text" id="cname" name="designation" placeholder="Your designation.."required>
+                <div class="nav">
+                    <button type="submit" id="register">REGISTER</button>
+                    <button type="submit" id="cancel" class="cancelbtn">CANCEL</button>
+                </div>
         </div>
     </form>
 </div>
