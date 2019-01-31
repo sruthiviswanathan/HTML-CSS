@@ -18,17 +18,19 @@
                     </div>
                 <div class="bottom">
                         <div class="scroll">
-                           <ul>
-                               <li>Latest</li>
-                               <li>Trending</li>
+                           <ul id="menu">
+                              
                            </ul>
                             <div>
                 </div>
         </div>
-        <div class="split right my-content">
-            <textarea></textarea>
+        <div class="split right my-content" id="txt">
+                <button type="submit"class="col-sm-12" onclick="addNewElement()">ADD A NOTE <i class="icon fa fa-plus-circle" aria-hidden="true"></i></button>
+            <textarea id="txtarea" oninput="setTitle(this)" placeholder="type your text here"></textarea>
+            <!-- <button type="submit"class="col-sm-12" onclick=" addNewElement()">ADD A NOTE <i class="icon fa fa-plus-circle" aria-hidden="true"></i></button> -->
         </div>
 
     </div>
 </body>
+<script src="blog.js"></script>
 </html>

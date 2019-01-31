@@ -8,16 +8,16 @@
 
 <h2>Login Form</h2>
 
-<form action="#">
+<form action="http://192.168.100.162:3000/auth/login" method="post">
  
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="pwd" placeholder="Enter Password" name="psw" required>
         
-    <button type="submit">Login</button>
+    <button type="submit" onclick="checklogin()">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
@@ -27,6 +27,6 @@
     <button type="button" class="cancelbtn">Cancel</button>
   </div>
 </form>
-
 </body>
+<script src = login.js></script>
 </html>
