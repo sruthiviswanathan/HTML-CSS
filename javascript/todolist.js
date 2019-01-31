@@ -47,12 +47,9 @@ list.addEventListener('click',function(event){
             var index= parent.getAttribute("id");
             console.log(index);
             var text = items[index].strike();
+            items[index]=text;
             console.log(text);
-            //var t = document.getElementById(index);
-            //console.log(t);
-            //list.getElementById(index).innerHTML=text;
-            //items.push(text);
-            //addList(items);
+            addList(items);
         }
         
 });
