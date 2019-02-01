@@ -199,7 +199,6 @@ a:active, a:hover {
         margin-top: 0;
       }
     }
-}
 
 @media (min-width:321px) and (max-width:768px){
     .col-sm-6 {
