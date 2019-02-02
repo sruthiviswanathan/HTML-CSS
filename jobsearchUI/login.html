@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="forms.css">
+    <title>LOGIN/SIGNUP</title>
+</head>
+<body onload="viewlogin()">
+        <div class="container">
+            <div class="nav"class="row col-25">
+        <button type="submit" onclick="viewlogin()">LOGIN</button><button type="submit"  onclick="viewsignup()">SIGNUP</button>
+            </div>
+        <form action="#" id="login">     
+        <div class="login">
+                <label for="email"class="row col-25"><b>EMAIL</b></label>
+                <input id="email"class="row col-75" type="email" placeholder="Your Email ID.." name="email" required>
+                <label for="psw" class="row col-25"><b>PASSWORD</b></label>
+                <input  id ="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
+                <label class="col-25"><input type="checkbox" checked="checked" name="remember"> Remember me</label> 
+        </div>
+        <div class="nav">
+            <button type="submit" id="login">LOGIN</button>
+            <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>  
+        </div>
+    </form>
+    <form action="#" id="signup">
+        <div class="signup">
+                <label for="uname" class="row col-25"><b>USERNAME</b></label>
+                <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.."required>
+                <label for="email" class="row col-25">EMAIL</label>
+                <input type="email"  class="row col-75" id="email" name="email" placeholder="Your email id.."required>
+                <label for="psw" class="row col-25"><b>PASSWORD</b></label>
+                <input  id="pwd" class="row col-75"type="password" placeholder="Enter Password" name="psw" required>
+                <label for="cname" class="row col-25"><b>COMPANY NAME</b></label>
+                <input type="text" class="row col-75" id="cname" name="cname" placeholder="Company name.."required>
+                <label for="designation" class="row col-25"><b>DESIGNATION</b></label>
+                <input type="text" class="row col-75" id="cname" name="designation" placeholder="Your designation.."required> 
+        </div><br>
+        <div class="nav">
+        <button type="submit" id="register">REGISTER</button>
+        <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
+    </div>
+        </form>
+</div>
+</body>
+<script src="styles.js"></script>
+</html>
