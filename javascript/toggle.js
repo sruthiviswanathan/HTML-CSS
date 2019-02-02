@@ -35,6 +35,7 @@ function viewlogin() {
     let body = await result.json();
     console.log(body);
     if(body['isSuccess']){
+      sessionStorage.setItem('flag',body['isSuccess']);
       sessionStorage.setItem('token',body['responseBody']['token']);
       window.location="blog.html"
     }
@@ -61,5 +62,7 @@ function viewlogin() {
 
     let json = await result.json();
     console.log(json);
+    // sessionStorage.setItem('flag',body['isSuccess']);
     sessionStorage.setItem('token',json['responseBody']['token']);
   }
+

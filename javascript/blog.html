@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="blog.css" />
 </head>
-<body>
+<body onload="fetchallnotes()">
     <div class="pagecontainer">
             <div class="split left">
                    <div class="top">
@@ -25,12 +25,12 @@
                 </div>
         </div>
         <div class="split right my-content" id="txt">
-                <button type="submit"class="col-sm-12" onclick="addNewElement()">ADD A NOTE <i class="icon fa fa-plus-circle" aria-hidden="true"></i></button>
-            <textarea id="txtarea" oninput="setTitle(this)" placeholder="type your text here"></textarea>
-            <!-- <button type="submit"class="col-sm-12" onclick=" addNewElement()">ADD A NOTE <i class="icon fa fa-plus-circle" aria-hidden="true"></i></button> -->
+                <button type="button"class="col-sm-12" id="note">ADD A NOTE <i class="icon fa fa-plus-circle" aria-hidden="true"></i></button>
+            <textarea id="txtarea"  placeholder="type your text here"></textarea>
+          
         </div>
 
     </div>
 </body>
-<script src="blog.js"></script>
+<script src="blog1.js"></script>
 </html>
