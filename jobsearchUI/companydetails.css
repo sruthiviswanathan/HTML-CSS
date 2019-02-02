@@ -6,6 +6,12 @@ body{
     height:100vh;
   
 }
+.tit {
+  color: dodgerblue;
+  text-align: center;
+  background-color: #ccc;
+  padding:5px
+}
 
 * {
     box-sizing: border-box;
@@ -23,7 +29,7 @@ body{
 
 li {
     float: left;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 25px;
     color: white;
 }
@@ -53,7 +59,7 @@ input[type=text] {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-    margin:0px 10px 15px 10px;
+    margin:0px 10px 15px 0px;
   }
   
 p {
@@ -112,7 +118,7 @@ p {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-    margin:0px 10px 15px 10px;
+    margin:0px 20px 15px 10px;
   }
   
   .maincard {
