@@ -1,3 +1,13 @@
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
 function openNav() {
   // document.getElementById("main").style.marginLeft = "250px";
   document.getElementById("mySidenav").style.width = "250px";
