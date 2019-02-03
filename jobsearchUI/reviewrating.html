@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reviewrating.css">
+</head>
+<body>
+    <form id="reviewForm" action="companydetails.html">
+       
+        <div class="tab">
+                <h1>RATE A COMPANY</h1>
+                        <select id="company" name ="company" >
+                          <option value="0">Select a Company:</option>
+                          <option value="1">Zilker Technology</option>
+                          <option value="2">Cognizant</option>
+                        </select>
+        <p><input type="number" placeholder="Rate this company on a Scale of 5" oninput="this.className = ''" name="rating" step=".01"></p>
+          <p><textarea placeholder="Share something about this company..." oninput="this.className = ''" name="review" required></textarea></p>
+        </div>
+        
+        <div class="tab">
+                <h1>KNOW THE INTERVIEW PROCESS?</h1>
+                <select id="job">
+                        <option value="0">Select a Job Designation:</option>
+                        <option value="1">Java Developer</option>
+                        <option value="2">PHP Developer</option>
+                      </select>
+                <p><textarea placeholder="Do you know about the interview process?..." oninput="this.className = ''" name="review"></textarea></p>
+        </div>
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">PREVIOUS</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">NEXT</button>
+          </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+</body>
+<script src="styles.js"></script>
+</html>
