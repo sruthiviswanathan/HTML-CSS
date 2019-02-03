@@ -6,9 +6,14 @@ body{
     height:100vh;
   
 }
-.container button {
+.button {
   background-color: dodgerblue;
-  
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin:0px 20px 15px -20px;
 }
 
 
@@ -102,7 +107,7 @@ p {
 
 
   label {
-    padding: 12px 12px 12px 0;
+    padding: 12px 12px 12px -25px;
     display: inline-block;
     color: #1565c0;
     font-weight: bold;
@@ -163,7 +168,7 @@ p {
   }
   
   @media (max-width:320px){ 
-      .col-20, .col-60, input[type=submit],.col-10 {
+      .col-20, .col-60, input[type=submit],.col-10,button {
           width: 100%;
           margin-top: 0;
           
@@ -175,7 +180,7 @@ p {
       }
   
   @media (min-width:321px) and (max-width:1167px){
-    .col-20, .col-60, input[type=submit], .col-10 { 
+    .col-20, .col-60, input[type=submit], .col-10,.button { 
         width: 100%;
         margin-top: 0;
       }
