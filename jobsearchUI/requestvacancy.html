@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REQUEST VACANCY</title>
     <link rel="stylesheet" href="forms.css">
-    <title>POST JOB</title>
 </head>
-<body> 
-<div class="container">
+<body>
+    <div class="container">
         <div class="tit">
-                <h3>YOUR NEXT HIRE IS HERE!!!</h3>
+                <h3>REQUEST FOR A VACANCY!! GET NOTIFIED!!</h3>
                 </div>
     <form action="#" id="postjob">
         <div class="form">
@@ -29,25 +29,21 @@
                 <input type="text" class="row col-75" id="location" name="location" placeholder="Enter Job Location.."required>
                 <label for="salary" class="row col-25"><b>SALARY</b></label>
                 <input type="number" class="row col-75" id="salary" name="salary" placeholder="Enter Salary.." step=".01" required>
-                <label for="count" class="row col-25"><b>COUNT</b></label>
-                <input type="number" class="row col-75" id="count" name="count" placeholder="Enter Vacancy Count.."required>
-                <label for="description" class="row col-25"><b>JOB DESCRIPTION</b></label>
-                <textarea rows="4" cols="50" name="description" placeholder="Enter Job Description"></textarea>
         </div><br>
         <div class="nav">
-        <button type="submit" id="publish">PUBLISH</button>
+        <button type="submit" id="save">SAVE JOB</button>
         <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
         </div>
     </form>   
 </div>
 <div class="form-popup" id="myForm">
-        <form action="login.html" class="form-container">
-          <h3>ADD NEW JOB DESIGNATION</h3>
-          <input type="text" placeholder="Enter new Job designation" name="newjob" required>
-          <button type="submit" id="addjob" class="btn">ADD DESIGNATION</button>
-          <button type="button" class="cancel btn" onclick="closeForm()">CLOSE</button>
-        </form>
- </div>
+    <form action="login.html" class="form-container">
+      <h3>ADD NEW JOB DESIGNATION</h3>
+      <input type="text" placeholder="Enter new Job designation" name="newjob" required>
+      <button type="submit" id="addjob" class="btn">ADD DESIGNATION</button>
+      <button type="button" class="cancel btn" onclick="closeForm()">CLOSE</button>
+    </form>
+</div>
 </body>
 <script src="styles.js"></script>
 </html>

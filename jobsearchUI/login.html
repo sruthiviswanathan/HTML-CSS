@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,85 @@
     <link rel="stylesheet" href="forms.css">
     <title>LOGIN/SIGNUP</title>
 </head>
+
 <body onload="viewlogin()">
-        <div class="container">
-            <div class="nav"class="row col-25">
-        <button type="submit" onclick="viewlogin()">LOGIN</button><button type="submit"  onclick="viewsignup()">SIGNUP</button>
-            </div>
-        <form action="#" id="login">     
-        <div class="login">
-                <label for="email"class="row col-25"><b>EMAIL</b></label>
-                <input id="email"class="row col-75" type="email" placeholder="Your Email ID.." name="email" required>
-                <label for="psw" class="row col-25"><b>PASSWORD</b></label>
-                <input  id ="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
-                <label class="col-25"><input type="checkbox" checked="checked" name="remember"> Remember me</label> 
+    <div class="container">
+        <div class="nav" class="row col-25">
+            <button type="submit" onclick="viewlogin()">LOGIN</button><button type="submit" onclick="viewsignup()">SIGNUP</button><button
+                type="submit" onclick="viewsignupasadmin()">ADMIN SIGNUP</button>
         </div>
-        <div class="nav">
-            <button type="submit" id="login">LOGIN</button>
-            <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>  
+        <div class="forms">
+            <form action="#" id="login">
+                <div class="login">
+                    <label for="email" class="row col-25"><b>EMAIL</b></label>
+                    <input id="email" class="row col-75" type="email" placeholder="Your Email ID.." name="email"
+                        required>
+                    <label for="psw" class="row col-25"><b>PASSWORD</b></label>
+                    <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
+                    <label class="col-25"><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                </div>
+                <div class="nav">
+                    <button type="submit" id="login">LOGIN</button>
+                    <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
+                </div>
+            </form>
+            <form action="#" id="signup">
+                <div class="signup">
+                    <label for="uname" class="row col-25"><b>USERNAME</b></label>
+                    <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.." required>
+                    <label for="email" class="row col-25">EMAIL</label>
+                    <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id.."
+                        required>
+                    <label for="psw" class="row col-25"><b>PASSWORD</b></label>
+                    <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="cname" class="row col-25"><b>COMPANY NAME</b></label>
+                    <input type="text" class="row col-75" id="cname" name="cname" placeholder="Company name.." required>
+                    <label for="designation" class="row col-25"><b>DESIGNATION</b></label>
+                    <input type="text" class="row col-75" id="cname" name="designation" placeholder="Your designation.."
+                        required>
+                </div><br>
+                <div class="nav">
+                    <button type="submit" id="register">REGISTER</button>
+                    <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
+                </div>
+            </form>
+            <form action="#" id="signupadmin">
+                <div class="signup">
+                    <label for="uname" class="row col-25"><b>USERNAME</b></label>
+                    <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.." required>
+                    <label for="email" class="row col-25">EMAIL</label>
+                    <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id.."
+                        required>
+                    <label for="psw" class="row col-25"><b>PASSWORD</b></label>
+                    <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="select-job" class="row col-25"><b>COMPANY NAME</b></label>
+                    <div class="select-job" style="width:75%;">
+                        <select id="job" required>
+                            <option value="0">Select Company Name:</option>
+                            <option value="1">Zilker Technology</option>
+                            <option value="2">Cognizant</option>
+                        </select>
+                    </div>
+                    <div class="nav">
+                        <button type="button" id="add" onclick="openForm()">NEW</button>
+                    </div>
+                </div><br>
+                <div class="nav">
+                    <button type="submit" id="register">REGISTER</button>
+                    <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
+                </div>
+            </form>
         </div>
-    </form>
-    <form action="#" id="signup">
-        <div class="signup">
-                <label for="uname" class="row col-25"><b>USERNAME</b></label>
-                <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.."required>
-                <label for="email" class="row col-25">EMAIL</label>
-                <input type="email"  class="row col-75" id="email" name="email" placeholder="Your email id.."required>
-                <label for="psw" class="row col-25"><b>PASSWORD</b></label>
-                <input  id="pwd" class="row col-75"type="password" placeholder="Enter Password" name="psw" required>
-                <label for="cname" class="row col-25"><b>COMPANY NAME</b></label>
-                <input type="text" class="row col-75" id="cname" name="cname" placeholder="Company name.."required>
-                <label for="designation" class="row col-25"><b>DESIGNATION</b></label>
-                <input type="text" class="row col-75" id="cname" name="designation" placeholder="Your designation.."required> 
-        </div><br>
-        <div class="nav">
-        <button type="submit" id="register">REGISTER</button>
-        <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
     </div>
+    <div class="form-popup" id="myForm">
+        <form action="login.html" class="form-container">
+          <h3>ADD NEW COMPANY</h3>
+          <input type="text" placeholder="Enter new Company" name="newcomp" required>
+          <button type="submit" id="addcomp" class="btn">ADD COMPANY</button>
+          <button type="button" class="cancel btn" onclick="closeForm()">CLOSE</button>
         </form>
-</div>
+ </div>
 </body>
 <script src="styles.js"></script>
+
 </html>
