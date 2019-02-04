@@ -17,7 +17,6 @@ ul {
     font-weight: bold;
     
 }
-
 li {
     float: left;
     margin-top: 15px;
@@ -28,7 +27,7 @@ li {
 li a {
     display: block;
     text-align: center;
-    /* padding: 14px 16px; */
+    padding: 14px 16px;
     text-decoration: none;
     background-color: dodgerblue;
     border: transparent;
@@ -103,4 +102,5 @@ a:active, a:hover {
           background-color:dodgerblue ;
           font-size: 18px;
           color: white;
+          margin: -13px;
       }  

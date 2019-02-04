@@ -1,60 +1,3 @@
-var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}
-
-function openNav() {
-  // document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  // document.getElementById("main").style.marginLeft = "0";
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-function viewlogin() {
-  var x = document.getElementById("signup");
-  var y = document.getElementById("login");
-  var z = document.getElementById("signupadmin");
-  x.style.display = "none";
-  y.style.display = "block";
-  z.style.display = "none";
-}
-
-function viewsignup() {
-  var y = document.getElementById("signup");
-  var x = document.getElementById("login");
-  var z = document.getElementById("signupadmin");
-  y.style.display = "block";
-  x.style.display = "none";
-  z.style.display = "none";
-
-}
-function viewsignupasadmin() {
-  var y = document.getElementById("signup");
-  var x = document.getElementById("login");
-  var z = document.getElementById("signupadmin");
-  y.style.display = "none";
-  x.style.display = "none";
-  z.style.display = "block";
-
-}
-
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-
-
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -106,8 +49,9 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "" || z[0].value == "Select a Company:") {
+    if (y[i].value == "" || z[0].value == "0") {
       // add an "invalid" class to the field:
+      console.log(z[0].value);
       y[i].className += " invalid";
       z[0].className += " invalid";
       // and set the current valid status to false
@@ -129,23 +73,4 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class on the current step:
   x[n].className += " active";
-}
-
-
-//////////////////////modal////////////////////////////////
-function displaymodal() {
-  var modal = document.getElementById('myModal');
-  var btn = document.getElementById("myBtn");
-  var span = document.getElementsByClassName("close")[0];
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
 }

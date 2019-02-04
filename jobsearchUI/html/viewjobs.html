@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>View Jobs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="viewjobs.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../css/viewjobs.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
             <!-- <div class="search-bar">
@@ -94,7 +94,7 @@
 </div>
       </div>
     
-      <div class="split right">
+      <div class="split right" id="rightside">
             <div class="header" id="myHeader">
                 <div class="row">
                         <div class="col-20 col-xs-12 col-md-12">
@@ -148,19 +148,4 @@
                                                         </div>
       </div>
 </body>
-<script>
-        window.onscroll = function() {
-        myFunction()
-      };
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-      
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-    </script>
 </html>

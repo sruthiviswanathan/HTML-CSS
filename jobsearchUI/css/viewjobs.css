@@ -136,16 +136,8 @@ right: 10px;
 .content {
   padding: 16px;
   color: white;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 102px;
+  overflow-y: scroll;
+  max-height: 550px;
 }
 
 @media (max-width:320px){ 
