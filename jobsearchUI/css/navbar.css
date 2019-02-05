@@ -3,7 +3,6 @@ body{
     height:100vh;
 }
 
-
 *{
     box-sizing: border-box;
   }
@@ -11,7 +10,7 @@ body{
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 6px;
+    padding: 1px;
     overflow: hidden;
     background-color:  dodgerblue;
     font-weight: bold;
@@ -98,9 +97,11 @@ a:active, a:hover {
       }
     
       .hambug{
+          width:2%;
           float:left;
           background-color:dodgerblue ;
           font-size: 18px;
           color: white;
-          margin: -13px;
+          cursor: pointer;
+          margin-top: -15px;
       }  
