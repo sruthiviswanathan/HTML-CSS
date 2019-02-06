@@ -5,6 +5,7 @@
      font-family: Arial, Helvetica, sans-serif;
      color:black;
      background-color: whitesmoke;
+     
     }
 
     .container {
@@ -20,7 +21,14 @@
         min-width: 300px;
         
     }
+    #defaultfields {
+      display:block;
+    }
 
+
+    #adminoptional {
+      display:none;
+    }
     .forms{
       margin-top: 50px;
     }
@@ -57,17 +65,20 @@
     clear: both;
   }
   
-
-input[type=text] ,input[type=email],input[type=password],input[type="number"],textarea,select{
+.check {
+  display:inline-block;
+}
+input[type=text] ,input[type=email],input[type=password],input[type="number"],textarea, select{
 
     margin: 10px 20px 0px 350px;
     width: 50%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize:vertical;
   }
 
-  label {
+  label,.checkbox {
     margin: 10px 20px 0px 350px;
     padding: 29px 12px 12px 0;
     display: block;
@@ -108,11 +119,6 @@ input[type=text] ,input[type=email],input[type=password],input[type="number"],te
     background-color: #f44336;
   } 
 
-  
-.select-job {
-    position: relative;
-    font-family: Arial;
-  }
 .addjob {
   width:10%;
 }

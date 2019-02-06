@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
+        
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="mainpage.html">FIND JOB</a>
         <a href="findcompany.html">FIND COMPANY</a>
         <a href="postjob.html">POST JOB</a>
-        <a href="#">YOUR PROFILE</a>
+        <a href="viewprofile.html">YOUR PROFILE</a>
         <a href="requestvacancy.html">REQUEST A VACANCY</a>
         <a href="#">VIEW PUBLISHED JOBS</a>
 </div>
@@ -31,7 +32,7 @@
        
         <div class="tab">
                 <h2>RATE A COMPANY</h2>
-                        <select id="company" name ="company" >
+                        <select id="company" name ="company" oninput="this.className = ''" >
                           <option value="0">Select a Company:</option>
                           <option value="1">Zilker Technology</option>
                           <option value="2">Cognizant</option>
@@ -60,6 +61,7 @@
           <span class="step"></span>
         </div>
     </form>
+
 </body>
 <script src="../js/review.js"></script>
 <script src="../js/styles.js"></script>

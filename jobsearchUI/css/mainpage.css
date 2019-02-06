@@ -1,30 +1,16 @@
 body{
-    margin:0;
-    /* background-image: url('https://news.blr.com/app/uploads/sites/6/2018/10/Hiring-Talent-02.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%; */
+
+     margin :0px;
     height:100vh;
+       
 }
+
 .tit {
   color: dodgerblue;
   text-align: center;
   background-color: #ccc;
   padding:5px;
 }
-
-.login {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
 
 * {
     box-sizing: border-box;
@@ -119,7 +105,7 @@ a:active, a:hover {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-    margin:0px -1px 20px 10px;
+    /* margin:0px -1px 20px 10px; */
   }
   
   input[type=submit]:hover {
@@ -181,7 +167,7 @@ a:active, a:hover {
       .sidenav {
         height: 100%;
         width: 0;
-        position: fixed;
+        position: absolute;
         z-index: 1;
         top: 45px;
         left: 0;
@@ -229,6 +215,7 @@ a:active, a:hover {
           height: 60%;
           width: 100%;
           }
+
           .col-25, .col-75, input[type=submit] {
               width: 100%;
               margin-top: 0;

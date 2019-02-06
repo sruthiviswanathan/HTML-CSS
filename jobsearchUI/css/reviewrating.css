@@ -4,6 +4,7 @@
   
   body {
     background-color: whitesmoke;
+  
   }
   
   #reviewForm {
@@ -30,7 +31,7 @@
   
   /* Mark input boxes that gets an error on validation: */
    input.invalid ,select.invalid {
-    background-color: lightblue;
+    background-color: #ef5350;
   }
   /* Hide all steps by default: */
   .tab {

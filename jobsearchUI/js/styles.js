@@ -20,9 +20,9 @@ function closeForm() {
 
 
 //////////////////////modal////////////////////////////////
-function displaymodal() {
+function displaymodal(id) {
   var modal = document.getElementById('myModal');
-  var btn = document.getElementById("myBtn");
+  var btn = document.getElementById(id);
   var span = document.getElementsByClassName("close")[0];
   btn.onclick = function () {
     modal.style.display = "block";
@@ -35,4 +35,9 @@ function displaymodal() {
       modal.style.display = "none";
     }
   }
+}
+
+function displayjobs(id) {
+  var x = document.getElementById("rightside");
+  x.style.display ="block";
 }
