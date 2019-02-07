@@ -171,11 +171,12 @@ body {
       }
   
   @media (max-width:600px) {
-    .right,.content {
-        display: none;
+    .right {
+        width: 0%;
     }
     .left,.jobs {
         width:100%;
+       
     }
   }
   
@@ -183,9 +184,11 @@ body {
     .right {
         /* right:25px; */
         width :70%;
+       
     }
     .left {
         width:30%;
+     
     }
   }
       
