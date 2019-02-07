@@ -19,18 +19,17 @@ body {
     position: fixed;
     overflow-x: hidden;
     height:100%;
-    margin-left:-23px;
     
   }
   
 
   .left {
     left: 0;
+    margin-left: 0px;
     width:30%;
     overflow-x: hidden;
     background-color: lightgray;
-    /* margin-bottom:50px; */
-    margin-bottom: 10px;
+    
   }
   
   .right {
@@ -53,22 +52,11 @@ body {
     overflow-y: scroll;
     max-height: 750px;
   }
-  input[type=text] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
   
   label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    color: dodgerblue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    /* margin-right:5px; */
+    color: black;
   }
+
 
   input[type=submit] {
     background-color: dodgerblue;
@@ -127,12 +115,13 @@ body {
     transition: 0.3s;
     padding:10px;
     margin-top:1px;
-    margin-left:25px;
+    
    }
   
   
   /* Clear floats after the columns */
   .row:after {
+    /* margin: -30px 20px 0px 350px; */
     content: "";
     display: table;
     clear: both;
