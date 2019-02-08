@@ -40,4 +40,12 @@ function displaymodal(id) {
 function displayjobs(id) {
   var x = document.getElementById("rightside");
   x.style.display ="block";
+
+}
+
+function displaymenu(id) {
+  var x = document.getElementById("rightside");
+  x.style.display ="none";
+  var x = document.getElementById("leftside");
+  y.style.display ="block";
 }

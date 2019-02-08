@@ -32,15 +32,22 @@ body {
  
 }
 .jobs {
-    
+   
   overflow-y: scroll;
-  max-height: 750px;
+  max-height: 850px;
 }
 .right {
   right: 0;
   width:70%;
   background-color: lavender;
- 
+  
+}
+
+.arrow {
+  color: white;
+  background-color: dodgerblue;
+  float:right;
+  width:5%;
 }
 
 #rightside {
@@ -124,7 +131,9 @@ right: 10px;
   margin-left:25px;
  }
 
-
+.row1 {
+  height: 95vh;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -146,7 +155,7 @@ button {
 }
 
 .header {
-  /* padding: 10px 16px; */
+ 
   background: #ccc;
   color: dodgerblue;
   text-align: center;
@@ -154,35 +163,38 @@ button {
 }
 
 .content {
-  padding: 16px;
+  /* padding: 16px; */
   color: black;
   overflow-y: scroll;
   max-height: 550px;
+ 
 }
 
 @media (max-width:320px){ 
       .col-xs-12 {
           width: 100%;
-          margin-top: 0;
         }
-        .col-xs-height {
-          width: 100%;
+        .col-xs-height{
+          width: 100%; 
           }
     }
 
 @media (min-width:321px) and (max-width:1167px){
       .col-md-12 {
-          width: 100%;
-          margin-top: 0;
+          width: 100%;   
+           
         }
         .col-sm-6 {
           width: 100%;
+           
       }
     }
 
 @media (max-width:600px) {
   .right {
-      width: 0%;
+      width: 100%;
+      display:none;
+     
   }
   .left {
       width:100%;
@@ -191,7 +203,6 @@ button {
 
 @media (min-width:601px) and (max-width:1367px) {
   .right {
-      /* right:25px; */
       width :70%;
   }
   .left {
