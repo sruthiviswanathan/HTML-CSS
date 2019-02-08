@@ -14,6 +14,7 @@ body{
 
 * {
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
 ul {
@@ -36,7 +37,6 @@ li {
 li a {
     display: block;
     text-align: center;
-    /* padding: 14px 16px; */
     text-decoration: none;
     background-color: dodgerblue;
     border: transparent;
@@ -105,7 +105,6 @@ a:active, a:hover {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-    /* margin:0px -1px 20px 10px; */
   }
   
   input[type=submit]:hover {
@@ -216,23 +215,21 @@ a:active, a:hover {
           width: 100%;
           }
 
-          .col-25, .col-75, input[type=submit] {
-              width: 100%;
-              margin-top: 0;
-            }
+          .col-xs-12,input[type=submit] {
+            width: 100%;
+            margin-top: 0;
           }
+        }
+
       
       @media (min-width:321px) and (max-width:768px){
           .col-sm-6 {
               width: 50%;
           }
-          .col-sm-height{
-              margin:0;
-              height: 50%;
-              width: 100%;
+       
+          .col-sm-12,input[type=submit] {
+            width: 100%;
+            margin-top: 0;
           }
-          .col-25, .col-75, input[type=submit] {
-              width: 100%;
-              margin-top: 0;
-            }
-          }
+        }
+    
