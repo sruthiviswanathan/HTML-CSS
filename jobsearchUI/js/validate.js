@@ -197,3 +197,53 @@ function updateUser()
    
     return true; 
 }
+function applyForJob()                                    
+{ 
+    var name = document.forms["applyforjob"]["username"];               
+    var email = document.forms["applyforjob"]["email"];    
+    var count = document.forms["applyforjob"]["years"];  
+    var resume = document.forms["applyforjob"]["resume"];
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (count.value == "")                               
+    { 
+        window.alert("Please enter a valid input."); 
+        count.focus(); 
+        return false; 
+    } 
+    if(resume.value == ""){
+        window.alert("Please upload a resume."); 
+        resume.focus(); 
+        return false;
+    }
+   
+    return true; 
+}
+
