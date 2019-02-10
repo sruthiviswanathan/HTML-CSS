@@ -51,5 +51,3 @@ function viewlogin() {
     document.getElementById("myForm").style.display = "none";
   }  
 
-
-  

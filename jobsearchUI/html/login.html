@@ -53,17 +53,18 @@
             </form>
             <form action="login.html" id="signup">
                 <div class="signup">
-                    <label for="uname" class="row col-25"><b>USERNAME*</b></label>
-                    <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.." required>
-                    <label for="email" class="row col-25"><b>EMAIL*</b></label>
-                    <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id.."
-                        required>
-                    <label for="psw" class="row col-25"><b>PASSWORD*</b></label>
-                    <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
-                    <label for="psw" class="row col-25"><b>RETYPE PASSWORD*</b></label>
-                    <input id="pwd" class="row col-75" type="password" placeholder="Reenter Password" name="cpsw" required>
 
                     <div id="defaultfields">
+                            <label for="uname" class="row col-25"><b>USERNAME*</b></label>
+                            <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.." required>
+                            <label for="email" class="row col-25"><b>EMAIL*</b></label>
+                            <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id.."
+                                required>
+                            <label for="psw" class="row col-25"><b>PASSWORD*</b></label>
+                            <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
+                            <label for="psw" class="row col-25"><b>RETYPE PASSWORD*</b></label>
+                            <input id="pwd" class="row col-75" type="password" placeholder="Reenter Password" name="cpsw"
+                                required>
                         <div class="nav">
                             <div id="admin"><button type="button" onclick="viewadminfields()">REGISTER AS ADMIN OF A
                                     COMPANY?</button></div>
@@ -75,40 +76,56 @@
                         <input type="text" class="row col-75" id="cname" name="designation" placeholder="Your designation.."
                             required>
                         <label for="skills" class="row col-25"><b>ADD SKILLS TO YOUR PROFILE</b></label>
-                       
-                       <div class="checkbox col-25">
-                        <span>
-                                <input type="checkbox" name="C" value="c"> C 
-                                <input type="checkbox" name="C++" value="c++"> C++ 
-                                <input type="checkbox" name="Java" value="Java"> Java 
-                        </span>
-                       </div>
-                    </div>
 
-                    <div id="adminoptional">
-                        <div class="nav">
-                            <div id="user"><button type="button" onclick="viewuserfields()">REGISTER AS USER?</button></div>
-                        </div>
-                        <label for="select-job" class="row col-25"><b>COMPANY NAME*</b></label>
-                        <div class="select-job" style="width:75%;">
-                            <select id="job">
-                                <option value="0">Select Company Name:</option>
-                                <option value="1">Zilker Technology</option>
-                                <option value="2">Cognizant</option>
-                            </select>
+                        <div class="checkbox col-25">
+                            <span>
+                                <input type="checkbox" name="C" value="c"> C
+                                <input type="checkbox" name="C++" value="c++"> C++
+                                <input type="checkbox" name="Java" value="Java"> Java
+                            </span>
                         </div>
                         <div class="nav">
-                            <button type="button" id="add" onclick="openForm()">NEW</button>
+                            <button type="submit" id="register">REGISTER</button>
+                            <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
                         </div>
-
                     </div>
-
-                </div><br>
-                <div class="nav">
-                    <button type="submit" id="register">REGISTER</button>
-                    <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
                 </div>
-            </form>
+            </form>                
+                    <div id="adminoptional">
+                    <form name="admin" action="login.html" id="signupadmin"  onsubmit="return validateForm()" method="post">
+                        <div class="signupadmin">
+                            <label for="uname" class="row col-25"><b>USERNAME*</b></label>
+                            <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name..">
+                            <label for="email" class="row col-25"><b>EMAIL*</b></label>
+                            <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id..">
+                            <label for="psw" class="row col-25"><b>PASSWORD*</b></label>
+                            <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw">
+                            <label for="psw" class="row col-25"><b>RETYPE PASSWORD*</b></label>
+                            <input id="pwd" class="row col-75" type="password" placeholder="Reenter Password" name="cpsw">
+
+                            <div class="nav">
+                                <div id="user"><button type="button" onclick="viewuserfields()">REGISTER AS USER?</button></div>
+                            </div>
+                            <label for="select-company" class="row col-25"><b>COMPANY NAME*</b></label>
+                            <div class="tab" style="width:75%;">
+                                <select id="select" name="company" oninput="this.className = ''">
+                                    <option value="">Select Company Name:</option>
+                                    <option value="1">Zilker Technology</option>
+                                    <option value="2">Cognizant</option>
+                                </select>
+                            </div>
+                            <div class="nav">
+                                <button type="button" id="add" onclick="openForm()">NEW</button>
+                            </div>
+                            <div class="nav">
+                                <input type="submit" value="REGISTER" name="Submit">   
+                                <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div><br>
+
+        
         </div>
     </div>
     <div class="form-popup" id="myForm">
@@ -122,5 +139,6 @@
 </body>
 <script src="../js/form.js"></script>
 <script src="../js/styles.js"></script>
+<script src="../js/validate.js"></script>
 
 </html>

@@ -73,11 +73,11 @@
                         <div class="split right" id="rightside">
                             <div class="content">
                                     
-                                <form action="#" id="postjob">
+                                <form action="#" id="postjob" name="postjob" onsubmit="return validatePostJob()" method="post">
                                         <div class="form">
                                                 <label for="select-job" class="row col-25"><b>JOB DESIGNATION</b></label>
                                                 <div class="select-job">
-                                                        <select id="job" required>
+                                                        <select id="job"name="job">
                                                                 <option value="0">Select job designation:</option>
                                                                 <option value="1">Java Developer</option>
                                                                 <option value="2">PHP Developer</option>
@@ -87,19 +87,17 @@
                                                         <button type="button" id="add" onclick="openForm()">NEW</button>
                                                 </div>
                                                 <label  for="location" class="row col-25"><b>LOCATION</b></label>
-                                                <input type="text" class="row col-75" id="location" name="location" placeholder="Enter Job Location.."
-                                                        required>
+                                                <input type="text" class="row col-75" id="location" name="location" placeholder="Enter Job Location..">
                                                 <label  for="salary" class="row col-25"><b>SALARY</b></label>
                                                 <input type="number" class="row col-75" id="salary" name="salary" placeholder="Enter Salary.."
-                                                        step=".01" required>
+                                                        step=".01">
                                                 <label  for="count" class="row col-25"><b>COUNT</b></label>
-                                                <input type="number" class="row col-75" id="count" name="count" placeholder="Enter Vacancy Count.."
-                                                        required>
+                                                <input type="number" class="row col-75" id="count" name="count" placeholder="Enter Vacancy Count..">
                                                 <label for="description" class="row col-25"><b>JOB DESCRIPTION</b></label>
-                                                <textarea rows="4" cols="50" name="description" placeholder="Enter Job Description" required></textarea>
+                                                <textarea rows="4" cols="50" name="description" placeholder="Enter Job Description"></textarea>
                                         </div><br>
                                         <div class="nav">
-                                                <button type="submit" id="publish">UPDATE</button>
+                                                <input type="submit" value="UPDATE" name="Submit">  
                                                 <button type="reset" id="cancel" class="cancelbtn">DISCARD</button>
                                         </div>
                                 </form>
@@ -116,5 +114,6 @@
                     </div>
 </body>
 <script src="../js/styles.js"></script>
+<script src="../js/validate.js"></script>
 
 </html>

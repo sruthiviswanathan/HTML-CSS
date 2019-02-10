@@ -78,6 +78,19 @@ input[type=text] ,input[type=email],input[type=password],input[type="number"],te
     resize:vertical;
   }
 
+  input[type="submit"]{
+    
+  display: inline-block;
+  background-color: dodgerblue;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
   label,.checkbox {
     margin: 10px 20px 0px 350px;
     padding: 29px 12px 12px 0;
@@ -108,11 +121,11 @@ input[type=text] ,input[type=email],input[type=password],input[type="number"],te
     background-color: blue;
     border:1px solid whitesmoke;
   }
-  
+/*   
    input[type=submit]:hover {
     margin:20px;
     background-color: lightblue;
-  }
+  } */
   .cancelbtn {
     width: 15%;
     padding: 14px 20px;
@@ -168,6 +181,10 @@ input[type=text] ,input[type=email],input[type=password],input[type="number"],te
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+input.invalid,select.invalid {
+  background-color: #ef5350;
 }
 
 @media (max-width:319px) {

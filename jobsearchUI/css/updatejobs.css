@@ -33,6 +33,7 @@ body {
   }
   .arrow {
     float:right;
+    display:none;
     width:5%;
   }
   .right {
@@ -64,17 +65,6 @@ body {
     color: black;
   }
 
-
-  input[type=submit] {
-    background-color: dodgerblue;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    margin:0px 0px 15px 10px;
-  }
   
   input[type=submit]:hover {
     opacity: 0.8;
@@ -156,6 +146,9 @@ body {
     .left,.jobs {
         width:100%;
        
+    }
+    .arrow{
+      display:block;
     }
   }
   

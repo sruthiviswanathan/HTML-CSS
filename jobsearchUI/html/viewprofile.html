@@ -34,22 +34,19 @@
         </div>
 
         <div class="forms">
-            <form action="#" id="signup">
-                <div class="signup">
+            <form action="#" name ="update" id="update"  onsubmit="return updateUser()" method="post" >
+                <div class="update">
                     <label for="uname" class="row col-25"><b>USERNAME*</b></label>
-                    <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name.." required>
+                    <input type="text" class="row col-75" id="uname" name="username" placeholder="Your name..">
                     <label for="email" class="row col-25"><b>EMAIL*</b></label>
-                    <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id.."
-                        required>
+                    <input type="email" class="row col-75" id="email" name="email" placeholder="Your email id..">
                     <label for="psw" class="row col-25"><b>PASSWORD*</b></label>
-                    <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw" required>
+                    <input id="pwd" class="row col-75" type="password" placeholder="Enter Password" name="psw">
                       
                         <label for="cname" class="row col-25"><b>COMPANY NAME*</b></label>
-                        <input type="text" class="row col-75" id="cname" name="cname" placeholder="Company name.."
-                            required>
+                        <input type="text" class="row col-75" id="cname" name="cname" placeholder="Company name..">
                         <label for="designation" class="row col-25"><b>DESIGNATION*</b></label>
-                        <input type="text" class="row col-75" id="cname" name="designation" placeholder="Your designation.."
-                            required>
+                        <input type="text" class="row col-75" id="cname" name="designation" placeholder="Your designation..">
                         <label for="skills" class="row col-25"><b>SKILLS SAVED IN YOUR PROFILE</b></label>
                        
                         <div class="checkbox col-25">
@@ -62,7 +59,7 @@
 
                 </div><br>
                 <div class="nav">
-                    <button type="submit" id="register">SAVE</button>
+                        <input type="submit" value="UPDATE" name="Submit">  
                     <button type="reset" id="cancel" class="cancelbtn">CANCEL</button>
                 </div>
             </form>
@@ -70,5 +67,5 @@
     </div>
 </body>
 <script src="../js/styles.js"></script>
-
+<script src="../js/validate.js"></script>
 </html>

@@ -46,6 +46,4 @@ function displayjobs(id) {
 function displaymenu(id) {
   var x = document.getElementById("rightside");
   x.style.display ="none";
-  var x = document.getElementById("leftside");
-  y.style.display ="block";
 }
