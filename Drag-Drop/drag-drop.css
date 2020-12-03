@@ -1,0 +1,29 @@
+.container {width: 100%;}
+.droppable-div {
+  background-color: blue;
+  height: 60px;
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+}
+.outline {border: 2px dotted red;}
+.draggable-div {display: inline-block;}
+#square {
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+#rect {
+  background-color: red;
+  width: 70px;
+  height: 50px;
+  margin: 5px;
+}
+#circle {
+  background-color: green;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+}
