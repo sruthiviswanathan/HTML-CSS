@@ -1,0 +1,21 @@
+.progress-bar {
+  position: relative;
+  background-color: grey;
+  height: 30px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+#progress-indicator {
+  background-color: green;
+  position: absolute;
+  left: 0px;
+  width: 20%;
+  height: 100%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
