@@ -1,0 +1,107 @@
+.container {
+    background-color: #FFDE03;
+    border: 2px solid #0336FF;
+    max-width: 50%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "tile tile tile"
+                        "tile tile tile"
+                        "tile tile tile";
+}
+
+.game-info {
+    text-align: center;
+    font-weight: bold;
+}
+
+#game-status {
+    font-size: 20px;
+    color: #0336FF;
+}
+
+#timer {
+    color: #0336FF;
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+button {
+    padding: 10px;
+    background-color: #FFDE03;
+    color: #0336FF;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.container > div {
+    padding: 10px;
+    height: 100px;
+    border: 2px solid #0336FF;
+    cursor: pointer;
+}
+
+.container > div:hover {
+    background-color: #0336FF;
+}
+
+.filled {
+    background-color: #0336FF;
+    border: 2px solid #FFDE03 !important;
+    border-collapse: collapse;
+}
+
+tile {
+    grid-area: tile;
+}
+
+.tile {
+    font-size: 100px;
+    text-align: center;
+    color: #FFDE03;
+}
+
+@media screen and (min-width: 280px) and (max-width: 350px) {
+    .container {
+        max-width: 90%;
+    }
+    .container > div {
+        height: 50px;
+    }
+
+    .tile {
+        font-size: 50px; 
+    }
+}
+
+@media screen and (min-width: 351px) and (max-width: 499px) {
+    .container {
+        max-width: 80%;
+    }
+    .container > div {
+        height: 60px;
+    }
+    .tile {
+        font-size: 50px; 
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 650px) {
+    .container {
+        max-width: 60%;
+    }
+    .container > div {
+        height: 65px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1500px) {
+    .container {
+        max-width: 50%;
+    }
+    .container > div {
+        height: 150px;
+    }
+}
